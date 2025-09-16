@@ -1,0 +1,104 @@
+Dart는 자바스크립트를 대체하기 위해 구글에서 개발한 언어로 초반에는 개발자들의 외면을 받았었다.
+그러나 현재는 플러터와 함께 급속히 성장하였으며 구글의 적극적인 지원을 받고있다.
+Dart는 개발자들이 쉽게 적응할 수 있도록 만들어졌기에 인기많은 기존 언어들의 특징을 많이 지니고 있다.
+
+void main() {
+  print('Hello, dart!');
+  print('안녕, 다트!');
+  print('안녕, 다트!' + ' 반가워');
+  print(5 + 4); // 9가 출력될 것이라 예측
+  
+  String? bookName = "핸즈온 플러터";
+  print(bookName);
+  
+  String bookName1;
+  bookName1 = "핸즈온 플러터";
+  print(bookName1);
+  
+  if (bookName != null){
+    print(bookName.length); // 문자열 수 출력
+  } 
+  
+  late String bookName2;
+//   bookName2 = makeBookName();
+  print(bookName.length);
+  String makeBookName(){
+    return '핸즈온 플러터';
+  }
+  
+//   오류
+//   final String youtuber = '개발하는 남자';
+//   const String nickname = '개남';
+  
+//   youtuber = '아무개1';
+//   nickname = '아무개2';
+  
+  int a = 312;
+  double b = 3.14159265;
+  
+  print(a);
+  print(a.runtimeType);
+  print(b);
+  print(b.runtimeType);
+  
+  num c = a;
+  print(c);
+  c = b;
+  print(c);
+  
+  Object d = a;
+  d = b;
+  d = c;
+  print(d);
+  
+//   int maxInt = 9223372036854775807;
+//   print(maxInt);
+  
+  var name = '김아무개';
+  var age = 23;
+  var format = '$name의 나이는 $age입니다';
+  print(format);
+    
+  var trueValue = true;
+  var falseValue = false;
+  print(trueValue);
+  print(falseValue);
+  
+  var nums = [1,2,3,4,5,6,7,8,9,10];
+  nums.add(11);
+  print(nums);
+  print(nums[5]);
+  print(nums.first);
+  print(nums.last);
+  
+//   var fixedNums = List<int>.filled(3.0);
+//   fixedNums.add(1);
+//   print(fixedNums);
+  
+  var vl1 = <int>[1,2,3];
+  print(vl1);
+  var vl2 = [1,2,3];
+  print(vl2);
+  var vl3 = List.empty(growable:true);
+  print(vl3);
+  var vl4 = List<int>.filled(3,0,growable:true);
+  print(vl4);
+  
+  var v3 = List.empty(growable: true);
+  v3.add(10);
+  v3.add('문자추가');
+  v3.add(true);
+  print(v3);
+  print(v3.runtimeType);
+    
+  var valueList = List.generate(100, (index) => 'sample$index');
+  print(valueList);
+
+  var listOne = [1,2,3];
+  print(listOne.runtimeType);
+  var listTwo = ['one','two','three'];
+  print(listTwo.runtimeType);
+  var mergeList = [...listOne, ...listTwo];
+  print(mergeList);
+  print(mergeList.runtimeType);
+}
